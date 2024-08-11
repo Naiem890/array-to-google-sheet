@@ -1,5 +1,5 @@
 const CLIENT_ID =
-  "829330897429-hvb3nvh0g6iiif7dmc1u4iihv4259bjb.apps.googleusercontent.com";
+  "829330897429-hvb3nvh0g6iiif7dmc1u4iihv4259bjbcd.apps.googleusercontent.com";
 const SCOPES =
   "https://www.googleapis.com/auth/spreadsheets https://www.googleapis.com/auth/drive.file";
 
