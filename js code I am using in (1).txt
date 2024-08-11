@@ -1,0 +1,18 @@
+//js code I am using in my webextension file
+async function exporty() {
+  const url = ""; // Please set the URL of your Web Apps.
+  const storageCache = await getStorageData();
+  fetch(url, { method: "POST", body: storageCache.data, mode: 'no-cors' })
+    .then((res) => res.text())
+    .then((url) => window.open(url, "_blank"));
+}
+
+//js code I am using in the google apps script
+function doPost(e) {
+  console.log(typeof(e))
+  const csv = Utilities.parseCsv(e.postData.contents);
+  const ss = SpreadsheetApp.create("sample");
+  ss.getSheets()[0].getRange(1, 1, csv.length, csv[0].length).setValues(csv);
+  DriveApp.getFileById(ss.getId()).setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
+  return ContentService.createTextOutput(ss.getUrl());
+}

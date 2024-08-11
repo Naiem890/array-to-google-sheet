@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Export Array to Google Sheets",
+  "version": "1.0",
+  "description": "A Chrome extension to export an array as a Google Sheets document.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "identity"
+  ],
+  "oauth2": {
+    "client_id": "829330897429-hvb3nvh0g6iiif7dmc1u4iihv4259bjb.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/spreadsheets",
+      "https://www.googleapis.com/auth/drive.file"
+    ]
+  }
+}
